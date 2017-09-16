@@ -1,12 +1,13 @@
 import React from 'react'
+import ReactMarkdown from 'react-markdown'
+import './Post.css'
 
 const Post = (props) => {
-    console.log("props:", props)
     return (
       <div className="post">
         <h1>Post</h1>
         <div>
-          { props.content }
+          <ReactMarkdown source={props.content} />
         </div>
       </div>
     )
