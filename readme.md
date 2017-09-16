@@ -1,24 +1,18 @@
-# React-webpack boilerplate  
+# My blog is a serverless react app  
 
-This is my starting point for new react projects.
+I have a github account and am decently comfortable writing in markdown, so I'm going to use github as the backend to my site. Essentially, I'll be using GitHub instead of Wordpress. 
 
-I'm still new to webpack, and tired of pasting in config I didn't fully understand. This is built from the ground up. Suggestions welcome.  
+GitHub also has an api. I haven't looked at it or what you can do yet so this may be a non-starter.
 
-### Usage  
+There's probably a better way use GitHub as my backend, but this is just a cool little proof-of-concept project.
 
-Start a new project by cloning the repo and deleting the `.git` folder. Then install the packages:  
-- `$ npm install`  
-<br>
-  
-Build the project and start the dev server with:  
-- `$ npm start`  
-<br>
-  
-To make a production build run:  
-- `$ npm run build`  
+***  
 
-This will create a 'dist' folder (.gitignored) with the full app inside. The js and css files are hash-versioned with matching html tags injected in the index.html. The folder is ready to be copied directly to s3 or any other hosting bucket.
+I'm a web developer who knows how to use git, has an AWS account and can deploy a live app. If this doesn't describe you, and you're interested in setting up this kind of a blog - send a link over to that person in your life who handles the computer stuff.
 
+***
 
-### Notes  
-- webpack must be installed globally (`$ npm i webpack -g`)  
+I'm going to start with a simple react app that uses fetch to grab a markdown file from one of my public git repos. If that works, I'm gonna set up a new mattsmrke-blog repo with that app in it and a 'posts' folder, cause from there I think this whole things is going to be pretty straightforward.  
+
+- https://github.com/rexxars/react-markdown  
+
