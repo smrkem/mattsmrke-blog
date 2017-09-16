@@ -1,0 +1,9 @@
+/node_modules
+/dist
+/bundle.js
+/index.html
+/styles.css
+
+npm-debug.log
+.DS_Store
+.env.private
