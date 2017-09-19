@@ -5,34 +5,25 @@ import Helmet from 'react-helmet'
 
 import './reset.scss'
 import './index.scss'
+import './Header.scss'
 
 const Header = () => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
+  <header>
+    <div className="container">
       <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          Gatsby
+        <Link className="site-brand" to="/" >
+          matt smrke{`'`}s<br />blog
         </Link>
       </h1>
+      <nav>
+        <ul>
+          <li><Link to='/posts' activeClassName='active'>Posts</Link></li>
+          <li><Link to='/about' activeClassName='active'>About</Link></li>
+          <li><Link to='/contact' activeClassName='active'>Contact</Link></li>
+        </ul>
+      </nav>
     </div>
-  </div>
+  </header>
 )
 
 const TemplateWrapper = ({ children }) => (
@@ -45,14 +36,7 @@ const TemplateWrapper = ({ children }) => (
       ]}
     />
     <Header />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
+    <div className="container">
       {children()}
     </div>
   </div>

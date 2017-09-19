@@ -1,0 +1,26 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
+/* Site Variables */
+$site_width: 98rem;
+
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  background: #ddd;
+  font-size: 2rem;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: $site_width;
+}

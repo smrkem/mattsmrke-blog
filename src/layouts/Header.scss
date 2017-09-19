@@ -1,0 +1,43 @@
+header {
+  padding: 2rem 0;
+  background: black;
+  color: white;
+  font-family: 'Cabin', sans-serif;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .site-brand {
+    color: white;
+    text-decoration: none;
+    font-size: 4rem;
+    display: block;
+    text-align: center;
+    line-height: 0.8;
+    letter-spacing: -0.5px;
+  }
+
+  nav {
+    margin-top: 4rem;
+  }
+  nav ul {
+    display: flex;
+  }
+  nav a {
+    text-decoration: none;
+    color: #aaa;
+    margin-left: 2rem;
+    text-transform: uppercase;
+    font-family: 'Ubuntu';
+    font-size: 2rem;
+    font-weight: 300;
+  }
+
+  nav a:focus,
+  nav a:hover,
+  nav a.active {
+    color: white;
+  }
+}
