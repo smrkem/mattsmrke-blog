@@ -1,0 +1,11 @@
+/* Place App specific styles here. */
+#app {
+
+}
+
+.red-square {
+    margin: 20px auto;
+    height: 40px;
+    width: 40px;
+    background: red;
+}
