@@ -1,9 +1,10 @@
-const path = require("path");
+const path = require("path")
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-
+const utils = require("./utils.js")
 
 const DIST_DIR = path.resolve(__dirname, "static");
+
 
 module.exports = {
 

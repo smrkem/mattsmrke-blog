@@ -4,7 +4,7 @@
   "description": "starting point for react app",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build && webpack-dev-server --content-base dist/",
+    "start": "npm run build && webpack-dev-server --content-base dist/ --history-api-fallback",
     "build": "rm -rf dist/ && webpack && cp src/index.html dist/index.html && cp -r src/assets dist/assets",
     "build:static": "rm -rf static/ && webpack -p --config=webpack.static.js && cp -r src/assets static/assets",
     "test": "echo \"Error: no test specified\" && exit 1"
