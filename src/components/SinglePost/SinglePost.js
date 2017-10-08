@@ -1,10 +1,10 @@
 import React from 'react'
 
-const SinglePost = ({match}) => {
-  console.log("Match: ", match)
+const SinglePost = ({post}) => {
+  console.log("SinglePost post: ", post)
   return (
     <div className="single-post">
-      <h1>Single Post</h1>
+      <h1>{ post.title }</h1>
     </div>
   )
 }
