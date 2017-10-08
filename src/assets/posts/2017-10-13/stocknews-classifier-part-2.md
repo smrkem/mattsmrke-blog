@@ -1,10 +1,3 @@
----
-path: '/stocknews-classifier-part-2'
-title: 'Building a data gathering app using React, AWS API Gateway, S3 and Lambda: Building the API'
-published: '2017-09-20'
----
-
-
 # Building the API and first Lambda  
 
 The front-end code is at a nice place - ready to send the user's query to the API. Currently it's failing since

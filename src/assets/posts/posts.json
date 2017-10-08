@@ -1,17 +1,17 @@
 [
   {
     "slug": "stocknews-classifier-part-1",
-    "title": "Building a data gathering app using React, AWS API Gateway, S3 and Lambda - Introduction and Setup",
+    "title": "Introduction and Setup: Building a data gathering app using React, AWS API Gateway, S3 and Lambda",
     "published": "2017-10-13"
   },
   {
     "slug": "stocknews-classifier-part-2",
-    "title": "Building a data gathering app using React, AWS API Gateway, S3 and Lambda: Building the API",
+    "title": "Building the API: Building a data gathering app using React, AWS API Gateway, S3 and Lambda",
     "published": "2017-10-13"
   },
   {
     "slug": "stocknews-classifier-part-3",
-    "title": "Building a data gathering app using React, AWS API Gateway, S3 and Lambda: Displaying the Results",
+    "title": "Displaying the Results: Building a data gathering app using React, AWS API Gateway, S3 and Lambda",
     "published": "2017-10-13"
   }
 ]
