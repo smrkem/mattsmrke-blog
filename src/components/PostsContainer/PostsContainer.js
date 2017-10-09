@@ -8,13 +8,30 @@ class PostsContainer extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      slug: null,
       posts: [],
-      singlePost: null
+      singlePost: null,
+      static: false
+    }
+    if (props.staticPosts) {
+      this.state.static = true
+      this.state.posts = props.staticPosts
+    }
+    if (props.staticSingleContents) {
+      const postIndex = props.staticPosts.findIndex(match => props.match.params.slug == match.slug)
+      const postData = props.staticPosts[postIndex]
+      postData.content = props.staticSingleContents
+      this.state.singlePost = postData
     }
   }
 
   componentDidMount() {
+    if (this.state.static) {
+      console.log("\n\nSTATIC - returning")
+      return
+    }
+
+    console.log("\n\nNon-STATIC??\n\n")
+
     const params = this.props.match.params
     console.log('DidMount params:', params)
     this.getPosts()
@@ -40,8 +57,10 @@ class PostsContainer extends React.Component {
   }
 
   getPosts() {
+    console.log("getting posts...");
     return fetch('/assets/posts/posts.json')
       .then(res => {
+        console.log('before checking response...')
         this.checkResponse(res)
         return res.json()
       })
@@ -79,7 +98,6 @@ class PostsContainer extends React.Component {
   checkResponse(response) {
     if (!response.ok) {
       console.log("CHECKING RESPONSE", response)
-      console.log("Error...")
       throw Error("Api fetch failed :(")
     }
   }

@@ -4,7 +4,18 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const utils = require("./utils.js")
 
 const DIST_DIR = path.resolve(__dirname, "static");
+const staticPosts = require("./src/assets/posts/posts.json")
 
+const renderPaths = [
+    '/',
+    '/page1',
+    '/posts'
+]
+const staticPostContents = {}
+staticPosts.map(post => {
+  renderPaths.push(`/posts/${post.slug}`)
+  staticPostContents[`/posts/${post.slug}`] = utils.getPostContents(post)
+})
 
 module.exports = {
 
@@ -41,12 +52,11 @@ module.exports = {
       allChunks: true
     }),
     new StaticSiteGeneratorPlugin({
-        paths: [
-            '/',
-            '/page1',
-            '/page2'
-        ],
-        locals: { }
+        paths: renderPaths,
+        locals: {
+          staticPosts,
+          staticPostContents
+        }
     })
   ]
 

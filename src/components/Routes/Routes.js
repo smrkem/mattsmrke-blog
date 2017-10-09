@@ -13,14 +13,30 @@ const Page2 = () => (
   <h1>Page 2 content</h1>
 )
 
-const Routes = () => (
+const Routes = (props) => (
   <div>
     <Menu />
     <Route path="/" exact component={Home} />
     <Route path={"/page1"} component={Page1} />
     <Route path={"/page2"} component={Page2} />
-    <Route path={"/posts/:slug"} component={PostsContainer} />
-    <Route path={"/posts"} exact component={PostsContainer} />
+    <Route path={"/posts/:slug"} render={(routeProps) => {
+        const staticPosts = "staticPosts" in props ? props.staticPosts : null
+        const staticSingleContents = ("staticSingleContents" in props && props.staticSingleContents) ? props.staticSingleContents : null
+        return <PostsContainer
+          staticSingleContents={staticSingleContents}
+          staticPosts={staticPosts}
+          {...routeProps}
+        />
+      }}
+    />
+    <Route path={"/posts"} exact render={(routeProps) => {
+        const staticPosts = "staticPosts" in props ? props.staticPosts : null
+        return <PostsContainer
+          staticPosts={staticPosts}
+          {...routeProps}
+        />
+      }}
+    />
   </div>
 )
 
