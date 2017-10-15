@@ -1,5 +1,13 @@
 :root {
   --site-width: 98rem;
+  --menu-width: 34rem;
+
+  --ms-green: rgb(70, 170, 160);
+  --ms-red: rgb(217, 65, 59);
+  --ms-orange: rgb(247, 177, 65);
+  --ms-pink: rgb(241, 55, 88);
+  --ms-blue: rgb(89, 104, 211);
+
 }
 
 html {
@@ -9,7 +17,7 @@ html {
 
 body {
   font-size: 2rem;
-  font-family: sans-serif;
+  font-family: 'Duru Sans', sans-serif;
 }
 
 *,
@@ -32,4 +40,26 @@ ul {
   max-width: var(--site-width);
   margin: 0 auto;
   padding: 0 5px;
+}
+
+#app-root {
+  padding-left: var(--menu-width);
+}
+
+
+
+.ms-green {
+  color: var(--ms-green);
+}
+.ms-red {
+  color: var(--ms-red);
+}
+.ms-orange {
+  color: var(--ms-orange);
+}
+.ms-pink {
+  color: var(--ms-pink);
+}
+.ms-blue {
+  color: var(--ms-blue);
 }

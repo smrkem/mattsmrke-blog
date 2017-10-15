@@ -11,6 +11,7 @@ const Template = (props) => {
         <title>{props.title}</title>
         <meta property="og:site_name" content="React Static Demo" />
         <meta name="description" content={props.description} />
+        <link href="https://fonts.googleapis.com/css?family=Duru+Sans" rel="stylesheet" />
         {props.css.map(file => <link href={`/${file}`} rel="stylesheet" />)}
       </head>
       <body>

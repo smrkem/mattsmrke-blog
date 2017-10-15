@@ -1,0 +1,26 @@
+#site-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: var(--menu-width);
+  border-right: 1px solid;
+  padding: 3rem 4rem;
+}
+
+#site-brand {
+  color: #333;
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 5rem;
+}
+
+#site-menu a {
+  padding: 1rem;
+  display: inline-block;
+}
+
+.horizontal-separator {
+  border-bottom: 2px solid #000;
+  margin: 1rem 0;
+}

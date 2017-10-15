@@ -14,7 +14,7 @@ const Page2 = () => (
 )
 
 const Routes = (props) => (
-  <div>
+  <div id="app-root">
     <Menu />
     <Route path="/" exact component={Home} />
     <Route path={"/page1"} component={Page1} />
