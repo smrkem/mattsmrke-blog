@@ -6,6 +6,7 @@ import SinglePost from '../SinglePost/SinglePost'
 class PostsContainer extends React.Component {
 
   constructor(props) {
+    console.log("in postscontainer", props)
     super(props)
     this.state = {
       posts: [],

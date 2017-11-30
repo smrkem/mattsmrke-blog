@@ -10,7 +10,7 @@ const Menu = () => (
 
     <NavLink to="/page1" className="nav-item ms-red" activeClassName="active" >Learning Resources</NavLink>
     <div className="horizontal-separator"></div>
-    <NavLink to="/posts" className="nav-item ms-orange" activeClassName="active" >Machine Learning Adventures</NavLink>
+    <NavLink to="/machine-learning-posts" className="nav-item ms-orange" activeClassName="active" >Machine Learning Adventures</NavLink>
     <div className="horizontal-separator"></div>
     <NavLink to="/posts" className="nav-item ms-pink" activeClassName="active" >Statistics 101</NavLink>
     <div className="horizontal-separator"></div>
